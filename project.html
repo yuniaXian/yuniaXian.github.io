@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wenbo Liu's Projects and Demos</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  .section-title {
+    color: #111827; /* Tailwind color Gray-900 */
+  }
+</style>
+</head>
+<body class="bg-white text-gray-900">
+<div class="container mx-auto px-4">
+  <header class="flex justify-between items-center py-6">
+    <h1 class="text-5xl font-bold">Projects and Demos</h1>
+    <nav>
+      <ul class="flex space-x-4 text-lg">
+        <li><a href="index.html" class="text-gray-900 hover:text-gray-700">Home</a></li>
+        <li><a href="projects.html" class="text-gray-900 hover:text-gray-700">Projects and Demos</a></li>
+        <li><a href="#" class="text-gray-900 hover:text-gray-700">Publications</a></li>
+        <li><a href="#" class="text-gray-900 hover:text-gray-700">Honors & Awards</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="space-y-4">
+          <h3 class="section-title text-2xl">GAN-based high quality talking face video synthesis</h3>
+          <p>Proposed a conditional generation model capable to generate temporally coherent, high resolution and realistic talking faces with lip sync, natural head movement and facial expressions.</p>
+          <p>Online demo from National Business Daily <a href="#" class="text-blue-600 hover:text-blue-800">Online demo</a></p>
+          <img src="https://placehold.co/600x340" alt="GAN-based high quality talking face video synthesis project thumbnail" class="w-full">
+        </div>
+        <!-- Project 2 -->
+        <div class="space-y-4">
+          <h3 class="section-title text-2xl">GAN-based dancing and action generation (exploratory)</h3>
+          <p>Proposed a conditional dancing generation pipeline with temporally consistent 3D pose estimation and mesh reconstruction.</p>
+          <img src="https://placehold.co/600x340" alt="GAN-based dancing and action generation project thumbnail" class="w-full">
+        </div>
+        <!-- Project 3 -->
+        <div class="space-y-4">
+          <h3 class="section-title text-2xl">CG rendering based 3D cartoon digital human</h3>
+          <p>Fully controllable 3D avatar with Mixamo skeleton actions and speech-driven facial blendshapes, with API for user customized or randomly generated actions.</p>
+          <img src="https://placehold.co/600x340" alt="CG rendering based 3D cartoon digital human project thumbnail" class="w-full">
+        </div>
+        <!-- Project 4 -->
+        <div class="space-y-4">
+          <h3 class="section-title text-2xl">Automatic online video composition platform</h3>
+          <p>Large-scale batch composition of videos using user provided data, featured by NLP-based paragraph generation, text-to-speech, digital human interpretation and data visualization.</p>
+          <img src="https://placehold.co/600x340" alt="Automatic online video composition platform project thumbnail" class="w-full">
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
