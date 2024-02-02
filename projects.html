@@ -1,59 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Participated Projects</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-        <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-        </style>
-    </head>
-    <body class="bg-white text-gray-900">
-        <div class="container mx-auto px-4">
-            <header class="flex justify-between items-center py-6">
-                <h1 class="text-3xl font-bold">Home</h1>
-                <nav>
-                  <ul class="flex space-x-4 text-lg">
-                    <li><a href="index.html" class="text-gray-900 hover:text-gray-700">Home</a></li>
-                    <li><a href="#" class="text-gray-900 hover:text-gray-700">Projects</a></li>
-                    <li><a href="publications.html" class="text-gray-900 hover:text-gray-700">Publications</a></li>
-                    <li><a href="awards.html" class="text-gray-900 hover:text-gray-700">Honors & Awards</a></li>
-                  </ul>
-                </nav>
-            </header>
-            <main>
-                <h2 class="text-2xl font-bold py-6">Projects</h2>
-                <div class="space-y-12">
-                    <!-- Project 1 -->
-                    <div>
-                    <h3 class="text-xl font-semibold mb-2">Knowledge graph based intents reconstruction</h3>
-                    <img src="projects/kg_intents/KG_intents01.png" alt="KG intents project class" width="500" height="200" class="mb-4">
-                    <p> Built service knowledge graph (KG). Re-construction of label hierarchy and refining classification logistics.
-                        Labels are reselected and redefined by entity and sementic similarity. The knowledge graph based intents improve classification model
-                        accuracy from 82.48% to 92.17%. The knowledge graph is also used to ingest fine grain factual knowledge in contextual learning and helps to surpress hallucination in generation.
-                    </p>
-                    </div>
-                    <!-- Project 2 -->
-                    <div>
-                    <h3 class="text-xl font-semibold mb-2">LLMs augmented Auto-labelling pipeline</h3>
-                    <img src="projects/auto_label/auto_label.png" alt="auto labelling project Thumbnail" width="500" height="200" class="mb-4">
-                    <p>This project is to conduct autolabelling in text data for text classification. The pipeline utilizes a diversity filtering algorithm to draw diverse and comprehensive samples from given labelled data. 
-                        By contextual learning, it leverages LLM to summerize and formalize the definition of each label (or labelling guidelines). With delibrated designed prompts integrated by definitions, the pipeline auto label data samples.  </p>
-                    </div>
-                    <!-- Project 3 -->
-                    <div>
-                    <h3 class="text-xl font-semibold mb-2">Knowledge graph to text modelling</h3>
-                    <img src="projects/kg2text/Kg2text_paper.png" alt="PixelTone Project Thumbnail" width="500" height="200" class="mb-4">
-                    <p> Converting knowledge graph triples to text (simplied as kg2text) is a classic NLP task. This project re-shaped the task as a tranlsation task and utilizes the language-agnostic representation learned by multilingual
-                        language model to conduct this task. The model was extendly pretrained and fine-tuned from a mbart 50 model. This project was finished during internship in Amazon
-                    </p>
-                    </div>
-                </div>
-            </main>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        display: flex;
+        flex-direction: column; /* Aligns the header and container in a column */
+        justify-content: flex-start; /* Starts the content from the top */
+        min-height: 100vh;
+        margin: 0;
+        align-items: center;
+    }
+    header {
+        width: 100%; /* Header width to span the entire viewport width */
+        display: flex;
+        justify-content: space-between; /* Positions the title and nav at opposite ends */
+        align-items: center;
+        padding: 0 20px; /* Padding on the sides of the header */
+        background: #f8f8f8; /* Light background for the header */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        position: fixed; /* Fixes the header at the top */
+        top: 0; /* Positions the header at the top */
+        z-index: 1000; /* Ensures the header stays above other elements */
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        max-width: 1000px;
+        padding: 100px 20px 20px; /* Added top padding to avoid overlap with the fixed header */
+    }
+    .text-container {
+        flex: 1;
+        padding-left: 20px;
+    }
+    .image-container img {
+        width: 340px;
+        height: auto;
+    }
+    .nav ul {
+        list-style-type: none; /* Removes default list styles */
+        padding: 0; /* Removes default padding */
+    }
+    .nav li {
+        display: inline; /* Displays the list items inline */
+        margin-right: 20px; /* Adds space between the list items */
+    }
+    .nav a {
+        text-decoration: none; /* Removes underline from links */
+        color: #333; /* Dark text color for better contrast on light background */
+        transition: color 0.3s; /* Smooth transition for hover effect */
+    }
+    .nav a:hover {
+        color: #555; /* Changes text color on hover */
+    }
+</style>
+</head>
+<body>
+    <header class="flex justify-between items-center py-6">
+        <h1 class="text-3xl font-bold">Home</h1>
+        <nav class="nav">
+            <ul class="flex space-x-4 text-lg">
+                <li><a href="index.html" class="text-gray-900 hover:text-gray-700">Home</a></li>
+                <li><a href="#" class="text-gray-900 hover:text-gray-700">Projects</a></li>
+                <li><a href="publications.html" class="text-gray-900 hover:text-gray-700">Publications</a></li>
+                <li><a href="awards.html" class="text-gray-900 hover:text-gray-700">Honors & Awards</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="projects/kg_intents/KG_intents01.png" alt="KG intents project class">
         </div>
-    </body>
+        <div class="text-container">
+            <h3 class="text-2xl font-semibold mb-2">Knowledge graph based intents reconstruction</h3>
+            <p>
+                Built service knowledge graph (KG). Re-construction of label hierarchy and refining classification logistics.
+                Labels are reselected and redefined by entity and semantic similarity. The knowledge graph based intents improve classification model
+                accuracy from 82.48% to 92.17%. The knowledge graph is also used to ingest fine grain factual knowledge in contextual learning and helps to suppress hallucination in generation.
+            </p>
+        </div>
+    </div>
+        <!-- Project 2 -->
+    <div class="container">
+        <div class="image-container">
+            <img src="projects/auto_label/auto_label.png" alt="KG intents project class">
+        </div>
+        <div class="text-container">
+            <h3 class="text-2xl font-semibold mb-2">LLMs augmented Auto-labelling pipeline</h3>
+            <p>
+                This project is to conduct autolabelling in text data for text classification. The pipeline utilizes a diversity filtering algorithm to draw diverse and comprehensive samples from given labelled data. 
+                By contextual learning, it leverages LLM to summerize and formalize the definition of each label (or labelling guidelines). With delibrated designed prompts integrated by definitions, the pipeline auto label data samples.  </p>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="projects/kg2text/Kg2text_paper.png" alt="Knowledge graph to text modelling">
+        </div>
+        <div class="text-container">
+            <h3 class="text-2xl font-semibold mb-2">LLMs augmented Auto-labelling pipeline</h3>
+            <p>
+                Converting knowledge graph triples to text (simplied as kg2text) is a classic NLP task. This project re-shaped the task as a tranlsation task and utilizes the language-agnostic representation learned by multilingual
+                language model to conduct this task. The model was extendly pretrained and fine-tuned from a mbart 50 model. This project was finished during internship in Amazon
+            </p>
+        </div>
+    </div>
+</body>
 </html>
