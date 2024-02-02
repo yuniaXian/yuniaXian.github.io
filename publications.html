@@ -3,30 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Publications</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<title>Publications</title>
 <style>
   body {
-    font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column; /* Aligns the header and container in a column */
+      justify-content: flex-start; /* Starts the content from the top */
+      min-height: 100vh;
+      margin: 0;
+      align-items: center;
+  }
+  header {
+      width: 100%; /* Header width to span the entire viewport width */
+      display: flex;
+      justify-content: space-between; /* Positions the title and nav at opposite ends */
+      align-items: center;
+      padding: 0 20px; /* Padding on the sides of the header */
+      background: #f8f8f8; /* Light background for the header */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      position: fixed; /* Fixes the header at the top */
+      top: 0; /* Positions the header at the top */
+      z-index: 1000; /* Ensures the header stays above other elements */
+  }
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      max-width: 1000px;
+      padding: 100px 20px 20px; /* Added top padding to avoid overlap with the fixed header */
+  }
+  .text-container {
+      flex: 1;
+      padding-left: 20px;
+  }
+  .image-container img {
+      width: 340px;
+      height: auto;
+  }
+  .nav ul {
+      list-style-type: none; /* Removes default list styles */
+      padding: 0; /* Removes default padding */
+  }
+  .nav li {
+      display: inline; /* Displays the list items inline */
+      margin-right: 20px; /* Adds space between the list items */
+  }
+  .nav a {
+      text-decoration: none; /* Removes underline from links */
+      color: #333; /* Dark text color for better contrast on light background */
+      transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  .nav a:hover {
+      color: #555; /* Changes text color on hover */
   }
 </style>
 </head>
 <body class="bg-white text-gray-900">
 <div class="container mx-auto px-4">
   <header class="flex justify-between items-center py-6">
-    <h1 class="text-5xl font-bold">Publications</h1>
-    <nav>
-      <ul class="flex space-x-4 text-lg">
-        <li><a href="index.html" class="text-gray-900 hover:text-gray-700">Home</a></li>
-        <li><a href="projects.html" class="text-gray-900 hover:text-gray-700">Projects</a></li>
-        <li><a href=# class="text-gray-900 hover:text-gray-700">Publications</a></li>
-        <li><a href="awards.html" class="text-gray-900 hover:text-gray-700">Honors & Awards</a></li>
-      </ul>
+    <h1 class="text-2xl font-bold">Publications</h1>
+    <nav class="nav">
+        <ul class="flex space-x-4 text-lg">
+            <li><a href="index.html" class="text-gray-900 hover:text-gray-700">Home</a></li>
+            <li><a href="#" class="text-gray-900 hover:text-gray-700">Projects</a></li>
+            <li><a href="publications.html" class="text-gray-900 hover:text-gray-700">Publications</a></li>
+            <li><a href="awards.html" class="text-gray-900 hover:text-gray-700">Honors & Awards</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
   <main>
-  <h2 class="text-5xl font-bold py-6">Publications</h2>
+  <h2 class="text-2xl font-bold py-6">Publications</h2>
   <div class="space-y-6">
     <section>
       <ul class="list-disc list-inside">
